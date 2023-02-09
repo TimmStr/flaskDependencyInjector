@@ -6,6 +6,7 @@ import views
 
 def create_app() -> Flask:
     container = Container()
+    container.config.github.auth_token.from_env("cbde697a6e01424856fde2b7f94a88d1b501320e")
 
     app = Flask(__name__)
     app.container = container
